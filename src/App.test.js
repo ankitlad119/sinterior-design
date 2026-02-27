@@ -1,8 +1,11 @@
+// src/App.test.js
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders the app title', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  // Match the heading text you actually render
+  expect(
+    screen.getByRole('heading', { name: /welcome to sinterior designer/i })
+  ).toBeInTheDocument();
 });
